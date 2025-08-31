@@ -1,0 +1,20 @@
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Entornos virtuales
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
