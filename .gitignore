@@ -18,3 +18,10 @@ ENV/
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+.status
+
+# Generados automáticamente
+*.pdf
+
+# Claude Code
+.claude/
