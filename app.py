@@ -13,6 +13,9 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     df = pd.read_csv('data/accidentesLimpio.csv')
+    meses = {1:'Enero',2:'Febrero',3:'Marzo',4:'Abril',5:'Mayo',6:'Junio',
+             7:'Julio',8:'Agosto',9:'Septiembre',10:'Octubre',11:'Noviembre',12:'Diciembre'}
+    df['Mes_Nombre'] = df['Mes'].map(meses)
     return df
 
 df = load_data()
