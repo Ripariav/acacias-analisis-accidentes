@@ -21,7 +21,7 @@ df = load_data()
 st.sidebar.header("Filtros de Análisis")
 st.sidebar.markdown("### Acacías, Meta 🗺️")
 
-años = sorted(df['Año'].unique())
+años = sorted(df['Año'].astype(int).unique())
 año_seleccionado = st.sidebar.selectbox("Seleccionar Año", ["Todos"] + list(años))
 
 barrios = sorted(df['Barrio'].unique())
@@ -30,7 +30,7 @@ barrio_seleccionado = st.sidebar.selectbox("Seleccionar Barrio", ["Todos"] + lis
 # Aplicar filtros
 df_filtrado = df.copy()
 if año_seleccionado != "Todos":
-    df_filtrado = df_filtrado[df_filtrado['Año'] == año_seleccionado]
+    df_filtrado = df_filtrado[df_filtrado['Año'].astype(int) == año_seleccionado]
 if barrio_seleccionado != "Todos":
     df_filtrado = df_filtrado[df_filtrado['Barrio'] == barrio_seleccionado]
 
